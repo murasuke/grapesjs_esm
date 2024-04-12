@@ -1,18 +1,50 @@
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>grapesjs-preset-newsletter minimum</title>
   <style>
-    body, html {
+    body,
+    html {
       margin: 0;
     }
   </style>
-    <link rel="stylesheet" href="./dist/bundle.css">
+  <link rel="stylesheet" href="./dist/bundle.css">
+  <link rel="stylesheet" href="./styles/editor.css" />
 </head>
+
 <body>
-<div id="gjs"></div>
-  <script  type="module" >
-    import editor from './dist/bundle.js';
-  </script>
+  <div class="container">
+    <header>
+      Header Panel
+    </header>
+    <main class="row">
+      <!-- 左パネル -->
+      <div id="layers" className="column" style="flex-basis: 500px">
+        <div id="blocks"></div>
+        Layers
+        <div id="layers-container"></div>
+      </div>
+      <div class="column editor-clm">
+        <!-- エディタ領域 -->
+        <div id="gjs" style="overflow: hidden"></div>
+      </div>
+      <div id="style-manager" class="column" style="flex-basis: 500px">
+        <!-- 右パネル -->
+        スタイルマネージャー
+        <br />
+        <div id="selectors-container"></div>
+        <div id="traits-container"></div>
+        <div id="style-manager-container"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      Footer Panel
+      <div class="panel__basic-actions" style="flex-grow: 1;"></div>
+    </footer>
+    <script type="module">
+      import editor from './dist/bundle.js';
+    </script>
 </body>
+
 </html>
