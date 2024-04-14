@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-simple": "rollup -c rollup_simple.config.js  --bundleConfigAsCjs",
-    "build-lib": "rollup -c rollup.config.js  --bundleConfigAsCjs"
+    "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
@@ -18,11 +18,9 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-replace": "^5.0.5",
     "rollup": "^4.14.1",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-import-css": "^3.5.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.36.0"
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   }
 }
