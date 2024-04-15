@@ -1,13 +1,16 @@
 import 'grapesjs/dist/css/grapes.min.css';
 import grapesjs from 'grapesjs';
 import blocks_basic from 'grapesjs-blocks-basic';
+import ckeditor from 'grapesjs-plugin-ckeditor';
 
 var editor = grapesjs.init({
   container: '#gjs',
-
   height: '100%',
   fromElement: true,
-  plugins: [blocks_basic],
+  plugins: [blocks_basic, ckeditor],
+  // pluginsOpts: {
+  //   'grapesjs-plugin-ckeditor': {/* ...options */}
+  // },
   i18n: {
     messagesAdd: {
       ja: {
@@ -54,7 +57,7 @@ var editor = grapesjs.init({
     appendTo: '#layers-container',
   },
   blockManager: {
-    appendTo: '#blocks',
+    appendTo: '#blocks-container',
   },
   styleManager: {
     appendTo: '#style-manager-container',

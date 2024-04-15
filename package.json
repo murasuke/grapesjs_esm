@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-simple": "rollup -c rollup_simple.config.js  --bundleConfigAsCjs",
+    "build-preset-newsletter": "rollup -c rollup_preset-newsletter.config.js  --bundleConfigAsCjs",
     "build": "rollup -c"
   },
   "author": "",
@@ -18,6 +18,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "grapesjs-plugin-ckeditor": "^1.0.1",
     "rollup": "^4.14.1",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-import-css": "^3.5.0",

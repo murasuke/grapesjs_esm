@@ -5,17 +5,17 @@ import commonjs from '@rollup/plugin-commonjs';
 import del from 'rollup-plugin-delete';
 
 export default {
-  input: './src/editor_simple.js',
+  input: './src/editor_preset-newsletter.js',
   output: {
     // esmodule
-    file: './dist_simple/bundle_simple.js',
+    file: './dist_preset-newsletter/bundle.js',
     format: 'esm',
     // sourcemap: true,
   },
 
   plugins: [
-    del({ targets: 'dist_simple/*' }),
-    css({ output: 'bundle_simple.css' }),
+    del({ targets: 'dist_preset-newsletter/*' }),
+    css({ output: 'bundle.css' }),
     peerDepsExternal(),
     resolve(),
     commonjs(),
